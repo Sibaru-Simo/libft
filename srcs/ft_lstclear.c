@@ -6,7 +6,7 @@
 /*   By: sidna_7 <who??@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/15 15:53:23 by sidna_7           #+#    #+#             */
-/*   Updated: 2025/09/15 16:32:53 by sidna_7          ###   ########.fr       */
+/*   Updated: 2025/09/15 16:58:08 by sidna_7          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	while (*lst)
 	{
 		tmp = (*lst)->next;
-		ft_delone(*lst, del);
+		ft_lstdelone(*lst, del);
 		*lst = tmp;
 	}
 	*lst = NULL;

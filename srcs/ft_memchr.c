@@ -6,7 +6,7 @@
 /*   By: sidna_7 <who??@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 23:50:34 by sidna_7           #+#    #+#             */
-/*   Updated: 2025/09/08 23:55:10 by sidna_7          ###   ########.fr       */
+/*   Updated: 2025/09/15 17:03:25 by sidna_7          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	size_t			i;
 
 	i = 0;
-	s1 = s;
+	s1 = (unsigned char *)s;
 	while (i < n)
 	{
 		if (s1[i] == (unsigned char)c)

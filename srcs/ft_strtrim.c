@@ -6,7 +6,7 @@
 /*   By: sidna_7 <who??@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/09 01:10:42 by sidna_7           #+#    #+#             */
-/*   Updated: 2025/09/09 12:02:51 by sidna_7          ###   ########.fr       */
+/*   Updated: 2025/09/16 14:54:27 by sidna_7          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,8 @@ char	*ft_strtrim(char const *s1, char const *s2)
 	size_t	len;
 	char	*str;
 
+	if (!s1 || !s2)
+		return (ft_strdup(""));
 	i = 0;
 	j = 0;
 	len = ft_length(s1, s2);
@@ -59,7 +61,7 @@ char	*ft_strtrim(char const *s1, char const *s2)
 	while (ft_check(s1[i], s2))
 		i++;
 	if (i > len)
-		return (0);
+		return (ft_strdup(""));
 	while (j < len && s1[i + j])
 	{
 		str[j] = s1[i + j];

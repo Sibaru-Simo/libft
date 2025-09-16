@@ -6,7 +6,7 @@
 /*   By: sidna_7 <who??@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/10 21:44:47 by sidna_7           #+#    #+#             */
-/*   Updated: 2025/09/10 22:01:59 by sidna_7          ###   ########.fr       */
+/*   Updated: 2025/09/15 17:02:29 by sidna_7          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,5 @@ t_list	*ft_lstnew(void *content)
 		return (NULL);
 	node->content = content;
 	node->next = NULL;
-	return (t_list);
+	return (node);
 }

@@ -6,7 +6,7 @@
 /*   By: sidna_7 <who??@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 23:29:08 by sidna_7           #+#    #+#             */
-/*   Updated: 2025/09/08 23:37:23 by sidna_7          ###   ########.fr       */
+/*   Updated: 2025/09/15 17:04:21 by sidna_7          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,11 @@ void	*ft_memcpy(void *d, const void *s, size_t n)
 
 	i = 0;
 	p1 = d;
-	p2 = s;
+	p2 = (unsigned char *)s;
 	while (i < n)
 	{
 		p1[i] = p2[i];
 		i++;
 	}
 	return (d);
-}
 }

@@ -6,7 +6,7 @@
 /*   By: sidna_7 <who??@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/09 00:55:54 by sidna_7           #+#    #+#             */
-/*   Updated: 2025/09/09 01:09:05 by sidna_7          ###   ########.fr       */
+/*   Updated: 2025/09/16 14:49:25 by sidna_7          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	char	*ptr;
 	size_t	len;
 
+	if (!s1 || !s2)
+		return (NULL);
 	len = ft_strlen(s1);
 	len += ft_strlen(s2);
 	str = malloc(len + 1);

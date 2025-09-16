@@ -6,7 +6,7 @@
 /*   By: sidna_7 <who??@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 20:41:50 by sidna_7           #+#    #+#             */
-/*   Updated: 2025/09/08 20:57:46 by sidna_7          ###   ########.fr       */
+/*   Updated: 2025/09/15 16:53:33 by sidna_7          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_skip(const char *s, int index)
 {
-	while (s[index] == 32 || s[index] >= 8 && s[index] <= 13)
+	while (s[index] == 32 || (s[index] >= 8 && s[index] <= 13))
 		index++;
 	return (index);
 }

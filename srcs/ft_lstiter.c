@@ -1,32 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sidna_7 <who??@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/08 23:56:09 by sidna_7           #+#    #+#             */
-/*   Updated: 2025/09/16 14:11:17 by sidna_7          ###   ########.fr       */
+/*   Created: 2025/09/15 16:02:39 by sidna_7           #+#    #+#             */
+/*   Updated: 2025/09/15 17:00:47 by sidna_7          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	unsigned char	*s1;
-	size_t			i;
-
-	i = 0;
-	s1 = (unsigned char *)s;
-	while (s1[i])
+	if (!lst || !f)
+		return ;
+	while (lst)
 	{
-		if (s1[i] == (unsigned char)c)
-			return ((char *)&s1[i]);
-		i++;
+		f(lst->content);
+		lst = lst->next;
 	}
-	if (s1[i] == (unsigned char)c)
-		return ((char *)&s1[i]);
-	return (NULL);
 }
